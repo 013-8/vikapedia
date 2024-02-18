@@ -12,6 +12,9 @@
 - Consider Tailwind
 - Update routing
 - Refactor bloatware-packages
+- Determine GUI framework
+- Draw.io architecture (try out VSCode's extension)
+- Read up on Vue and 
 
 
 
