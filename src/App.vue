@@ -2,18 +2,27 @@
 export default {
     data() {
         return {
-            audioCounter: 0,
-            audioFile: new Audio('/madness.mp3')
+            madnessLevel: 0,
+            soundBites: [
+                new Audio('/sound_bites/mad.mp3'),
+                new Audio('/sound_bites/madness.mp3'),
+                new Audio('/sound_bites/off.mp3'),
+                new Audio('/sound_bites/slowmo_hjerneskade.mp3'),
+                new Audio('/sound_bites/this_is_lillevannet.mp3'),
+                new Audio('/sound_bites/this_is_madness.mp3')
+            ],
+            isDemon: false
         }
     },
     methods: {
         playAudio() {
-            if (!this.audioFile) return
-            this.audioCounter++
-            this.audioFile.play()
+            if (!this.soundBites) return
+            this.soundBites[Math.floor(Math.random() * this.soundBites.length)].play()
+            this.madnessLevel++
         },
-        isDemonic() {
-            return this.audioCounter % 3 === 0
+        engageDemonMode() {
+            this.isDemon = this.madnessLevel % 3 === 0
+            return true
         }
     }
 }
@@ -22,8 +31,7 @@ export default {
 <template>
     <div id="wrapper">
         <div @click.prevent="playAudio()">
-            <h1 v-if="isDemonic()">👹 V I K A P E D I A 👹</h1>
-            <h1 v-else>V I K A P E D I A</h1>
+            <h1>V I K A P E D I A</h1>
         </div>
         <div>
             <p id="description">
@@ -45,9 +53,9 @@ export default {
                 sunt id ea ad reprehenderit. Officia do sint deserunt culpa do fugiat elit. Anim
                 eiusmod in quis elit exercitation magna velit minim. Fugiat anim aliquip occaecat
                 esse dolor est. Sint non ad commodo sunt mollit labore culpa consequat do pariatur.
-                Sunt aliquip anim sit minim ullamco consequat ipsum tempor esse minim mollit. Et
-                anim sunt veniam culpa labore adipisicing incididunt id aliqua ullamco aliquip Lorem
-                dolor sint. Sit sunt deserunt aliqua pariatur esse.
+                Sunt aliquip anim sit minim {{ madnessLevel }} / 100 consequat ipsum tempor esse
+                minim mollit. Et anim sunt veniam culpa labore adipisicing incididunt id aliqua
+                ullamco aliquip Lorem dolor sint. Sit sunt deserunt aliqua pariatur esse.
             </p>
         </div>
     </div>
