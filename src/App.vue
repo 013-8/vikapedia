@@ -63,9 +63,8 @@ export default {
 
 <style>
 #wrapper {
-    font-family: 'Courier New', Courier, monospace;
     user-select: none;
-    color: white;
+    color: #f0f7fd;
     width: 100%;
     min-width: 100%;
 }
@@ -78,8 +77,10 @@ h1 {
     margin-right: auto;
     margin-bottom: 0;
     opacity: 0.75;
+    padding-left: 10px;
+    padding-right: 10px;
     &:hover {
-        color: purple;
+        color: 71767A;
         text-shadow: 3px 3px;
     }
 }
@@ -90,5 +91,6 @@ p {
     margin-left: auto;
     margin-right: auto;
     opacity: 0.75;
+    padding: 10px;
 }
 </style>
