@@ -17,19 +17,12 @@
 -   Documentation // I.e. Swagger before separate API?
 -   Pinia // State management
 
+
+
 ### NOTE-TO-SELF
 
 -   **Domains:** https://control.regery.com/domains/list
 -   **Brick red:** #CB4154
--   [Quick start](https://vuejs.org/guide/quick-start.html#quick-start)
--   **Vite:** a local development server written by Evan You, the creator of Vue.js, and used by default by Vue and for React project templates. It has support for TypeScript and JSX. It uses Rollup and esbuild internally for bundling.
--   **[Vue Single File Components](https://vuejs.org/guide/scaling-up/sfc):**
-
-    -   [playground](https://play.vuejs.org/#eNp9kUFLwzAUx7/KM5cqzBXZbXQDlYF6UFHBSy6je+sy0yQkL3NQ+t19SdncYezW9//9X/pL24l758a7iGIqqlB75QgCUnRzaVTrrCfowOMaelh720LB1UIaaWprAkEbGpglfl08odYWvq3Xq6viRpqqHI7jg3ggbJ1eEvIEUG3u5l2Xl/u+KnnKqTIuEuxuW7tCPZOCuRRQMqzKk30xEhT49WvVjLfBGjbv0r4UtW2d0ujfHCnWk2IKmSS2ZLvfl5yRjzg65PUG658z+TbsUybFu8eAfodSHBktfYM04MXnK+75+QjZPmpuX4AfGKyOyXGoPUSzYu2TXrZ9zt9fmeYrLPaEJhwulURTs899KfifPF64+r/uZDzJe9L0ov8DExSnNA==)
-    -   [syntax](https://vuejs.org/api/sfc-spec)
-    -   [API's](https://vuejs.org/api/application.html)
--   [Composition API](https://vuejs.org/guide/introduction#composition-api) vs [Options API](https://vuejs.org/guide/introduction#options-api) // Go with Composition API + Single-File Components if you plan to build full applications with Vue.
--   CDN vs packages
 
 
 
@@ -53,7 +46,17 @@
 
 
 
-**Documentation**
+### Documentation
+
+* https://vuejs.org/examples/#hello-world
+* https://vuejs.org/tutorial/
+* https://vuejs.org/guide/essentials/template-syntax.html
+* https://vuejs.org/guide/essentials/lifecycle.html#lifecycle-diagram
+* https://vuejs.org/guide/essentials/watchers.html
+* **[Vue Single File Components](https://vuejs.org/guide/scaling-up/sfc):**
+  -   [playground](https://play.vuejs.org/#eNp9kUFLwzAUx7/KM5cqzBXZbXQDlYF6UFHBSy6je+sy0yQkL3NQ+t19SdncYezW9//9X/pL24l758a7iGIqqlB75QgCUnRzaVTrrCfowOMaelh720LB1UIaaWprAkEbGpglfl08odYWvq3Xq6viRpqqHI7jg3ggbJ1eEvIEUG3u5l2Xl/u+KnnKqTIuEuxuW7tCPZOCuRRQMqzKk30xEhT49WvVjLfBGjbv0r4UtW2d0ujfHCnWk2IKmSS2ZLvfl5yRjzg65PUG658z+TbsUybFu8eAfodSHBktfYM04MXnK+75+QjZPmpuX4AfGKyOyXGoPUSzYu2TXrZ9zt9fmeYrLPaEJhwulURTs899KfifPF64+r/uZDzJe9L0ov8DExSnNA==)
+  -   [syntax](https://vuejs.org/api/sfc-spec)
+  -   [API's](https://vuejs.org/api/application.html)
 
 - https://yarnpkg.com/cli
 
