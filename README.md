@@ -48,7 +48,7 @@
 
 ### Documentation
 
-* https://vuejs.org/examples/#hello-world
+* https://vuejs.org/examples/
 * https://vuejs.org/tutorial/
 * https://vuejs.org/guide/essentials/template-syntax.html
 * https://vuejs.org/guide/essentials/lifecycle.html#lifecycle-diagram
