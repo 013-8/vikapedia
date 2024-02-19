@@ -55,6 +55,8 @@
 
 **Documentation**
 
-https://vitejs.dev/guide/cli
+- https://yarnpkg.com/cli
 
+- https://vitejs.dev/guide/cli
+- https://cli.vuejs.org/guide
 
