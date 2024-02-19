@@ -59,4 +59,5 @@
 
 - https://vitejs.dev/guide/cli
 - https://cli.vuejs.org/guide
+- https://semver.org/
 
