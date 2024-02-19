@@ -2,16 +2,18 @@
 export default {
     data() {
         return {
-            isAudioPlaying: false,
-            audioFile: new Audio('assets/audio.madness.mp3')
+            audioCounter: 0,
+            audioFile: new Audio('/madness.mp3')
         }
     },
     methods: {
         playAudio() {
-            console.log('THIS IS MADNESS', new Audio('assets/audio.madness.mp3'))
-            if (this.isAudioPlaying || !this.audioFile) return
-            this.isAudioPlaying = true
+            if (!this.audioFile) return
+            this.audioCounter++
             this.audioFile.play()
+        },
+        isDemonic() {
+            return this.audioCounter % 3 === 0
         }
     }
 }
@@ -20,7 +22,8 @@ export default {
 <template>
     <div id="wrapper">
         <div @click.prevent="playAudio()">
-            <h1 id="title">V I K A P E D I A</h1>
+            <h1 v-if="isDemonic()">👹 V I K A P E D I A 👹</h1>
+            <h1 v-else>V I K A P E D I A</h1>
         </div>
         <div>
             <p id="description">
@@ -52,6 +55,8 @@ export default {
 
 <style>
 #wrapper {
+    font-family: 'Courier New', Courier, monospace;
+    user-select: none;
     color: white;
     width: 100%;
     min-width: 100%;
