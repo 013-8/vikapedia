@@ -2,17 +2,16 @@
 export default {
     data() {
         return {
-            message: 'Hello World!',
-            isRed: true,
-            color: 'green'
+            isAudioPlaying: false,
+            audioFile: new Audio('assets/audio.madness.mp3')
         }
     },
     methods: {
-        toggleRed() {
-            this.isRed = !this.isRed
-        },
-        toggleColor() {
-            this.color = this.color === 'green' ? 'blue' : 'green'
+        playAudio() {
+            console.log('THIS IS MADNESS', new Audio('assets/audio.madness.mp3'))
+            if (this.isAudioPlaying || !this.audioFile) return
+            this.isAudioPlaying = true
+            this.audioFile.play()
         }
     }
 }
@@ -20,10 +19,10 @@ export default {
 
 <template>
     <div id="wrapper">
-        <div id="title-wrapper">
+        <div @click.prevent="playAudio()">
             <h1 id="title">V I K A P E D I A</h1>
         </div>
-        <div id="description-wrapper">
+        <div>
             <p id="description">
                 Lorem tempor aliqua do duis cupidatat ad sunt. Magna magna ex magna excepteur
                 officia ut in fugiat quis. Qui Lorem adipisicing incididunt magna ullamco et duis
@@ -54,23 +53,22 @@ export default {
 <style>
 #wrapper {
     color: white;
-    /* min-width: 100%;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    margin-right: auto; */
-    margin: auto;
     width: 100%;
     min-width: 100%;
 }
 h1 {
+    cursor: pointer;
     text-align: center;
     max-width: 50%;
     background-color: #cb4154;
     margin-left: auto;
     margin-right: auto;
+    margin-bottom: 0;
     opacity: 0.75;
+    &:hover {
+        color: purple;
+        text-shadow: 3px 3px;
+    }
 }
 p {
     max-width: 50%;
