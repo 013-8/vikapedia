@@ -1,6 +1,6 @@
 /* color palette from <https://github.com/vuejs/theme> */
 :root {
-    --vt-c-white: #ffffff;
+    /* --vt-c-white: #ffffff;
     --vt-c-white-soft: #f8f8f8;
     --vt-c-white-mute: #f2f2f2;
 
@@ -18,12 +18,12 @@
     --vt-c-text-light-1: var(--vt-c-indigo);
     --vt-c-text-light-2: rgba(60, 60, 60, 0.66);
     --vt-c-text-dark-1: var(--vt-c-white);
-    --vt-c-text-dark-2: rgba(235, 235, 235, 0.64);
+    --vt-c-text-dark-2: rgba(235, 235, 235, 0.64); */
 }
 
 /* semantic color variables for this project */
 :root {
-    --color-background: var(--vt-c-white);
+    /* --color-background: var(--vt-c-white);
     --color-background-soft: var(--vt-c-white-soft);
     --color-background-mute: var(--vt-c-white-mute);
 
@@ -33,12 +33,12 @@
     --color-heading: var(--vt-c-text-light-1);
     --color-text: var(--vt-c-text-light-1);
 
-    --section-gap: 160px;
+    --section-gap: 160px; */
 }
 
 @media (prefers-color-scheme: dark) {
     :root {
-        --color-background: var(--vt-c-black);
+        /* --color-background: var(--vt-c-black);
         --color-background-soft: var(--vt-c-black-soft);
         --color-background-mute: var(--vt-c-black-mute);
 
@@ -46,21 +46,34 @@
         --color-border-hover: var(--vt-c-divider-dark-1);
 
         --color-heading: var(--vt-c-text-dark-1);
-        --color-text: var(--vt-c-text-dark-2);
+        --color-text: var(--vt-c-text-dark-2); */
     }
 }
 
 *,
 *::before,
 *::after {
-    box-sizing: border-box;
+    /* box-sizing: border-box;
     margin: 0;
-    font-weight: normal;
+    font-weight: normal; */
+}
+
+html {
+    min-height: 100%;
+    min-width: 100%;
 }
 
 body {
-    min-height: 100vh;
-    color: var(--color-text);
+    min-height: 100%;
+    height: 100%;
+    width: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url('backgrounds/lillevannet_1.jpg');
+
+    /* min-height: 100vh; */
+    /* color: var(--color-text);
     background: var(--color-background);
     transition:
         color 0.5s,
@@ -82,5 +95,5 @@ body {
     font-size: 15px;
     text-rendering: optimizeLegibility;
     -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
+    -moz-osx-font-smoothing: grayscale; */
 }
