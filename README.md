@@ -49,6 +49,7 @@
 
 ### Documentation
 
+* https://firebase.google.com/docs
 * https://vuejs.org/examples/
 * https://vuejs.org/tutorial/
 * https://vuejs.org/guide/essentials/template-syntax.html
