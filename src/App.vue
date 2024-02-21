@@ -3,7 +3,7 @@ export default {
     data() {
         return {
             madnessLevel: 0,
-            maxMadness: 15,
+            maxMadness: 666,
             soundBites: [
                 new Audio('/sound_bites/mad.mp3'),
                 new Audio('/sound_bites/madness.mp3'),
