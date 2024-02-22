@@ -14,12 +14,19 @@
 
 import { initializeApp } from 'firebase/app'
 import { getAnalytics } from 'firebase/analytics'
-import { firebaseConfig } from 'firebase.config'
 
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
 
 // Initialize Firebase
-const app = initializeApp(firebaseConfig)
+const app = initializeApp({
+    apiKey: 'AIzaSyDSh5KGKutgZjLIxaO1rfZ41PquZch8ZNA',
+    authDomain: 'vikapedia.firebaseapp.com',
+    projectId: 'vikapedia',
+    storageBucket: 'vikapedia.appspot.com',
+    messagingSenderId: '711248914910',
+    appId: '1:711248914910:web:509a1d3afd53f2df2e954f',
+    measurementId: 'G-XVPC6V68GY'
+})
 
 const analytics = getAnalytics(app)
