@@ -13,15 +13,9 @@
         "format": "prettier --write src/",
         "upgrade": "yarn upgrade-interactive",
         "node-version": "node -v",
-        "ui": "vue ui",
-        "fb-serve": "firebase serve",
-        "fb-login": "firebase login",
-        "fb-login-ci": "firebase login:ci",
-        "fb-login-ext": "firebare login --no-localhost",
-        "fb-projects": "firebase projects:list"
+        "ui": "vue ui"
     },
     "dependencies": {
-        "firebase": "^10.8.0",
         "pinia": "^2.1.7",
         "vue": "^3.4.15",
         "vue-router": "^4.2.5"
