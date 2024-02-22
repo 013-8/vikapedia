@@ -30,7 +30,7 @@ export default {
             return this.madnessLevel >= this.maxMadnessLevel
         },
         isSemiDemon() {
-            return this.madnessLevel % 5 === 0
+            return this.madnessLevel > 0 && this.madnessLevel % 5 === 0
         },
         levelUpMadness() {
             this.madnessLevel++
