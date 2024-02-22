@@ -6,7 +6,7 @@
         "cypress.config.*",
         "nightwatch.conf.*",
         "playwright.config.*",
-        "firebase-config.ts"
+        "firebase.config.ts"
     ],
     "compilerOptions": {
         "composite": true,
