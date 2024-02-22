@@ -3,7 +3,7 @@ export default {
     data() {
         return {
             madnessLevel: 0,
-            maxMadness: 666,
+            maxMadnessLevel: 666,
             soundBites: [
                 new Audio('/sound_bites/mad.mp3'),
                 new Audio('/sound_bites/madness.mp3'),
@@ -21,35 +21,46 @@ export default {
     methods: {
         playAudio() {
             if (!this.soundBites || !this.secretSoundBytes) return
-            this.madnessLevel++
-            if (this.madnessLevel % 5 === 0) {
-                this.secretSoundBytes[0].play()
-                return
-            }
-            this.soundBites[Math.floor(Math.random() * this.soundBites.length)].play()
-        },
-        resetMadness() {
-            this.madnessLevel = 0
+            this.levelUpMadness()
+            if (this.isDemon()) return this.playSecretDemonSoundByte()
+            if (this.isSemiDemon()) return this.playSecretSemiDemonSoundByte()
+            return this.playRandomSoundByte()
         },
         isDemon() {
-            if (this.madnessLevel > this.maxMadness) this.resetMadness()
-            if (this.madnessLevel >= this.maxMadness) {
-                this.secretSoundBytes[1].play()
-                return true
-            }
-            return false
+            return this.madnessLevel >= this.maxMadnessLevel
+        },
+        isSemiDemon() {
+            return this.madnessLevel % 5 === 0
+        },
+        levelUpMadness() {
+            this.madnessLevel++
+            if (this.madnessLevel > this.maxMadnessLevel) this.resetMadness()
+        },
+        resetMadness(audibleReset: boolean = false) {
+            this.madnessLevel = 0
+            if (audibleReset) this.secretSoundBytes[0].play()
+        },
+        playSecretDemonSoundByte() {
+            return this.secretSoundBytes[1].play()
+        },
+        playSecretSemiDemonSoundByte() {
+            return this.secretSoundBytes[0].play()
+        },
+        playRandomSoundByte() {
+            this.soundBites[Math.floor(Math.random() * this.soundBites.length)].play()
         }
     }
 }
 </script>
 
 <template>
-    <div v-if="isDemon()" class="wrapper demon-mode">
-        <div @click.prevent="playAudio()" class="demon-mode">
-            <h1>💀 V I K A P E D I A 💀</h1>
+    <div class="wrapper" :class="{ 'demon-mode': isDemon() }">
+        <div @click.prevent="playAudio()">
+            <h1 v-if="isDemon()">💀 V I K A P E D I A 💀</h1>
+            <h1 v-else>&nbsp; V I K A P E D I A &nbsp;</h1>
         </div>
         <div>
-            <p class="description demon-mode">
+            <p v-if="isDemon()" class="description">
                 NULLA UT ULLAMCO CULPA EST ET OFFICIA ULLAMCO LABORUM PROIDENT QUIS COMMODO
                 CUPIDATAT NISI. ENIM SINT CONSECTETUR EXERCITATION EA. ALIQUA ANIM DO LOREM DUIS.
                 EIUSMOD EXERCITATION LABORIS NOSTRUD LABORE DOLOR. EST ANIM PROIDENT LABORE DESERUNT
@@ -91,14 +102,7 @@ export default {
                 REPREHENDERIT AD ALIQUIP. NULLA ET NISI VOLUPTATE EIUSMOD IN NON SIT EST SUNT CULPA
                 VENIAM CULPA.
             </p>
-        </div>
-    </div>
-    <div v-else class="wrapper">
-        <div @click.prevent="playAudio()">
-            <h1>&zwnj; V I K A P E D I A &zwnj;</h1>
-        </div>
-        <div>
-            <p class="description">
+            <p v-else class="description">
                 LOREM TEMPOR ALIQUA DO DUIS CUPIDATAT AD SUNT. MAGNA MAGNA EX MAGNA EXCEPTEUR
                 OFFICIA UT IN FUGIAT QUIS. QUI LOREM ADIPISICING INCIDIDUNT MAGNA ULLAMCO ET DUIS
                 CUPIDATAT IPSUM SINT CONSEQUAT NISI EA DO. LABORUM ENIM ALIQUA NISI DUIS EU FUGIAT
@@ -118,10 +122,10 @@ export default {
                 EIUSMOD IN QUIS ELIT EXERCITATION MAGNA VELIT MINIM. FUGIAT ANIM ALIQUIP OCCAECAT
                 ESSE DOLOR EST. SINT NON AD COMMODO SUNT MOLLIT LABORE CULPA CONSEQUAT DO PARIATUR.
                 SUNT ALIQUIP ANIM SIT MINIM
-                <span @click="resetMadness()">{{ madnessLevel }} / {{ maxMadness }}</span> CONSEQUAT
-                IPSUM TEMPOR ESSE MINIM MOLLIT. ET ANIM SUNT VENIAM CULPA LABORE ADIPISICING
-                INCIDIDUNT ID ALIQUA ULLAMCO ALIQUIP LOREM DOLOR SINT. SIT SUNT DESERUNT ALIQUA
-                PARIATUR ESSE.
+                <span @click="resetMadness(true)">{{ madnessLevel }} / {{ maxMadnessLevel }}</span>
+                CONSEQUAT IPSUM TEMPOR ESSE MINIM MOLLIT. ET ANIM SUNT VENIAM CULPA LABORE
+                ADIPISICING INCIDIDUNT ID ALIQUA ULLAMCO ALIQUIP LOREM DOLOR SINT. SIT SUNT DESERUNT
+                ALIQUA PARIATUR ESSE.
             </p>
         </div>
     </div>
