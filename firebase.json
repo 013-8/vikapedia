@@ -19,7 +19,7 @@
     ],
     "hosting": {
         "public": "public",
-        "ignore": ["firebase.json", "**/.*", "**/node_modules/**"],
+        "ignore": ["firebase.json", "**/.*", "**/node_modules/**, **/*.mp3"],
         "rewrites": [
             {
                 "source": "**",
