@@ -27,6 +27,7 @@ export default {
             return this.playRandomSoundByte()
         },
         isDemon() {
+            //TODO: store demons in db (email)?
             return this.madnessLevel >= this.maxMadnessLevel
         },
         isSemiDemon() {
@@ -100,7 +101,8 @@ export default {
                 TEMPOR ALIQUIP QUI IN EU CILLUM QUIS. IN CONSECTETUR DOLOR NOSTRUD ESSE LABORE
                 INCIDIDUNT AMET. DITTA E KUN STARTEN. AD LABORE SINT OFFICIA QUI ESSE TEMPOR NISI
                 OFFICIA UT DOLOR REPREHENDERIT AD ALIQUIP. NULLA ET NISI VOLUPTATE EIUSMOD IN NON
-                SIT EST SUNT CULPA VENIAM CULPA 2302222315: 00000000-0138-0139-0140-000000000000@proton.mes
+                SIT EST SUNT CULPA VENIAM CULPA 2302222315:
+                00000000-0138-0139-0140-000000000000@proton.mes
             </p>
             <p v-else class="description">
                 LOREM TEMPOR ALIQUA DO DUIS CUPIDATAT AD SUNT. MAGNA MAGNA EX MAGNA EXCEPTEUR
