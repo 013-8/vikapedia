@@ -27,12 +27,11 @@ jobs:
                   node-version: ${{ env.NODE_VERSION }}
                   cache: 'yarn'
 
-            - name: yarn lint, install, build, and test
+            - name: yarn install, lint and build
               run: |
-                  yarn run lint
                   yarn install --frozen-lockfile
+                  yarn run lint
                   yarn run build
-                  # yarn run test
 
             - name: Upload artifact for deployment job
               uses: actions/upload-artifact@v3
