@@ -4,6 +4,8 @@
 
 **_SKELETOR PREVAILS YET AGAIN!!!_**
 
+
+
 ### TODOS
 
 -   Setup Firebase branch
@@ -17,15 +19,18 @@
 -   Documentation // I.e. Swagger before separate API?
 -   Pinia // State management
 
+
+
 ### NOTE-TO-SELF
 
--   **Domains:** https://control.regery.com/domains/list
 -   **Brick red:** #CB4154
+-   **Domains:** https://control.regery.com/domains/list
 -   This is madness: https://www.youtube.com/watch?v=uoNyVwLxD6E
+
+
 
 ### Documentation
 
--   https://firebase.google.com/docs
 -   https://vuejs.org/examples/
 -   https://vuejs.org/tutorial/
 -   https://vuejs.org/guide/essentials/template-syntax.html
