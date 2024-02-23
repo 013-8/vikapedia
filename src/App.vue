@@ -152,7 +152,7 @@ h1 {
     margin-left: auto;
     margin-right: auto;
     margin-bottom: 0;
-    opacity: 0.75;
+    opacity: 0.99;
     padding-left: 10px;
     padding-right: 10px;
     &:hover {
