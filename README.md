@@ -8,16 +8,13 @@
 
 ### TODOS
 
--   Setup Firebase branch
--   Consider Tailwind
+-   Create Azure Functions for fetching data from a mongo DB
+-   Implement Tailwind
+-   Update the front page
 -   Update routing
--   Refactor bloatware-packages
--   Determine GUI framework
 -   Draw.io architecture (try out VSCode's extension)
--   Read up on Vue and FireBase
--   CI/CD: GitHub Actions vs FireBase
 -   Documentation // I.e. Swagger before separate API?
--   Pinia // State management
+-   Pinia vs Elf // State management
 
 
 
