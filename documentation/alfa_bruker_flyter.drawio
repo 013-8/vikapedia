@@ -1,0 +1,65 @@
+<mxfile host="Electron" modified="2024-02-24T15:13:18.336Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/23.1.5 Chrome/120.0.6099.109 Electron/28.1.0 Safari/537.36" etag="E3e4ridDDghiC5bdW908" version="23.1.5" type="device">
+  <diagram name="Page-1" id="z6alDlq_eMZmnTNq-ZQk">
+    <mxGraphModel dx="441" dy="311" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="1pe0P0wXuqBfRF-PuUQy-1" value="&lt;h1&gt;Vikapedia (alpha)&lt;/h1&gt;&lt;div&gt;- Kunne hente dagens si&lt;/div&gt;&lt;div&gt;- Kunne hente heile si-boka&lt;/div&gt;&lt;div&gt;- Kunne sortere si-boka&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;- dato&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;- alfabetisk&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;- angitt tag(s)?&lt;/div&gt;" style="text;html=1;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="110" y="110" width="260" height="150" as="geometry" />
+        </mxCell>
+        <mxCell id="1pe0P0wXuqBfRF-PuUQy-2" value="" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;dropTarget=0;collapsible=0;recursiveResize=0;outlineConnect=0;portConstraint=eastwest;newEdgeStyle={&quot;curved&quot;:0,&quot;rounded&quot;:0};participant=umlActor;" vertex="1" parent="1">
+          <mxGeometry x="110" y="260" width="20" height="490" as="geometry" />
+        </mxCell>
+        <mxCell id="1pe0P0wXuqBfRF-PuUQy-4" value="" style="html=1;points=[[0,0,0,0,5],[0,1,0,0,-5],[1,0,0,0,5],[1,1,0,0,-5]];perimeter=orthogonalPerimeter;outlineConnect=0;targetShapes=umlLifeline;portConstraint=eastwest;newEdgeStyle={&quot;curved&quot;:0,&quot;rounded&quot;:0};" vertex="1" parent="1pe0P0wXuqBfRF-PuUQy-2">
+          <mxGeometry x="5" y="100" width="10" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="1pe0P0wXuqBfRF-PuUQy-5" value="dictionaryOutdated$" style="html=1;align=left;spacingLeft=2;endArrow=block;rounded=0;edgeStyle=orthogonalEdgeStyle;curved=0;rounded=0;" edge="1" target="1pe0P0wXuqBfRF-PuUQy-4" parent="1pe0P0wXuqBfRF-PuUQy-2">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="15" y="90" as="sourcePoint" />
+            <Array as="points">
+              <mxPoint x="45" y="120" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="1pe0P0wXuqBfRF-PuUQy-3" value="Azure Function App" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;dropTarget=0;collapsible=0;recursiveResize=0;outlineConnect=0;portConstraint=eastwest;newEdgeStyle={&quot;curved&quot;:0,&quot;rounded&quot;:0};" vertex="1" parent="1">
+          <mxGeometry x="350" y="260" width="120" height="490" as="geometry" />
+        </mxCell>
+        <mxCell id="1pe0P0wXuqBfRF-PuUQy-9" value="" style="html=1;points=[[0,0,0,0,5],[0,1,0,0,-5],[1,0,0,0,5],[1,1,0,0,-5]];perimeter=orthogonalPerimeter;outlineConnect=0;targetShapes=umlLifeline;portConstraint=eastwest;newEdgeStyle={&quot;curved&quot;:0,&quot;rounded&quot;:0};" vertex="1" parent="1pe0P0wXuqBfRF-PuUQy-3">
+          <mxGeometry x="55" y="160" width="10" height="150" as="geometry" />
+        </mxCell>
+        <mxCell id="1pe0P0wXuqBfRF-PuUQy-10" value="getDictionary()" style="html=1;verticalAlign=bottom;endArrow=block;curved=0;rounded=0;entryX=0;entryY=0;entryDx=0;entryDy=5;" edge="1" target="1pe0P0wXuqBfRF-PuUQy-9" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="120" y="425" as="sourcePoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="1pe0P0wXuqBfRF-PuUQy-11" value="JSON-dictionary JSON" style="html=1;verticalAlign=bottom;endArrow=open;dashed=1;endSize=8;curved=0;rounded=0;exitX=0;exitY=1;exitDx=0;exitDy=-5;" edge="1" source="1pe0P0wXuqBfRF-PuUQy-9" parent="1" target="1pe0P0wXuqBfRF-PuUQy-2">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="120" y="495" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="1pe0P0wXuqBfRF-PuUQy-12" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;i&gt;Vikasi-a&lt;/i&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;- [0]: dagens si&lt;/p&gt;&lt;hr size=&quot;1&quot;&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;- [1,...,n]: alle si-ane&lt;/p&gt;" style="verticalAlign=top;align=left;overflow=fill;html=1;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="200" y="570" width="125" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="1pe0P0wXuqBfRF-PuUQy-16" value="MongoDb" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;dropTarget=0;collapsible=0;recursiveResize=0;outlineConnect=0;portConstraint=eastwest;newEdgeStyle={&quot;curved&quot;:0,&quot;rounded&quot;:0};" vertex="1" parent="1">
+          <mxGeometry x="550" y="260" width="100" height="490" as="geometry" />
+        </mxCell>
+        <mxCell id="1pe0P0wXuqBfRF-PuUQy-17" value="" style="html=1;points=[[0,0,0,0,5],[0,1,0,0,-5],[1,0,0,0,5],[1,1,0,0,-5]];perimeter=orthogonalPerimeter;outlineConnect=0;targetShapes=umlLifeline;portConstraint=eastwest;newEdgeStyle={&quot;curved&quot;:0,&quot;rounded&quot;:0};" vertex="1" parent="1pe0P0wXuqBfRF-PuUQy-16">
+          <mxGeometry x="45" y="160" width="10" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="1pe0P0wXuqBfRF-PuUQy-18" value="getAllDocuments()" style="html=1;verticalAlign=bottom;endArrow=block;curved=0;rounded=0;entryX=0;entryY=0;entryDx=0;entryDy=5;" edge="1" target="1pe0P0wXuqBfRF-PuUQy-17" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="410" y="425" as="sourcePoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="1pe0P0wXuqBfRF-PuUQy-19" value="Json-array JSON" style="html=1;verticalAlign=bottom;endArrow=open;dashed=1;endSize=8;curved=0;rounded=0;exitX=0;exitY=1;exitDx=0;exitDy=-5;" edge="1" source="1pe0P0wXuqBfRF-PuUQy-17" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="410" y="495" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="1pe0P0wXuqBfRF-PuUQy-20" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;i&gt;Si&lt;/i&gt;&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;+ id: GUID&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;+ opprettet: DateTime&lt;br&gt;+ oppdatert: DateTime&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;+ verdi: String&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;+ kommentar: String[] or linking table (SiKommentar)&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;+ referanser:&amp;nbsp; GUID[] or linking table (SiSi)&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;+ hanka: string[] or int[] or linking table (SiHanka)&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;+ lenker: string[]&lt;/p&gt;" style="verticalAlign=top;align=left;overflow=fill;html=1;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="610" y="420" width="300" height="140" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
