@@ -2,7 +2,7 @@ import { defineAsyncComponent } from 'vue'
 import { MongoClient, ServerApiVersion } from 'mongodb'
 import { resolve } from 'path'
 
-const StartMongoDbClient = defineAsyncComponent(() => {
+export const StartMongoDbClient = defineAsyncComponent(() => {
     return new Promise((resolve, reject) => {
         const client = new MongoClient(
             'mongodb+srv://0138:wlSEGVCulpkHrGig@vikapedia.scgpq1w.mongodb.net/?retryWrites=true&w=majority&appName=VIKAPEDIA',
@@ -17,6 +17,7 @@ const StartMongoDbClient = defineAsyncComponent(() => {
         try {
             connectMongoDbClient(client)
             testMongoDbConnection(client)
+            return resolve
         } catch (error) {
             return reject(error)
         } finally {

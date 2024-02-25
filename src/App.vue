@@ -50,7 +50,10 @@ export default {
         playRandomSoundByte() {
             this.soundBites[Math.floor(Math.random() * this.soundBites.length)].play()
         }
-    }
+    },
+    mounted() {
+        console.log('>>> App: mounted')
+.    }
 }
 </script>
 
