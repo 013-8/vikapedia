@@ -1,1 +1,1 @@
-type Guid = string
+export type Guid = string
