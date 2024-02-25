@@ -1,5 +1,5 @@
-import { BaseModel } from '../base-model'
-import { SiCommentRating } from './si-comment-rating.model'
+import type { BaseModel } from '../base-model'
+import type { SiCommentRating } from './si-comment-rating.model'
 
 export interface SiComment extends BaseModel {
     value: string

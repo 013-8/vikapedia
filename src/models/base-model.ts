@@ -1,6 +1,6 @@
-import { Guid } from './shared.model'
+import type { Guid } from './shared.model'
 
-export abstract class BaseModel {
+export interface BaseModel {
     id: Guid
     created: Date
     updated: Date

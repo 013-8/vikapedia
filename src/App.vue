@@ -1,4 +1,5 @@
 <script lang="ts">
+import { DummySia } from './models/si/si.model'
 export default {
     data() {
         return {
@@ -52,8 +53,8 @@ export default {
         }
     },
     mounted() {
-        console.log('>>> App: mounted')
-.    }
+        console.log('>>> App: mounted w/ default sia', DummySia)
+    }
 }
 </script>
 

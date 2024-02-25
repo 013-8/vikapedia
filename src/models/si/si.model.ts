@@ -1,10 +1,10 @@
-import { BaseModel } from '../base-model'
-import { Guid } from '../shared.model'
-import { SiComment } from './si-comment.model'
-import { SiRating } from './si-rating.model'
-import { SiTag } from './tag-model'
+import type { BaseModel } from '../base-model'
+import type { Guid } from '../shared.model'
+import type { SiComment } from './si-comment.model'
+import type { SiRating } from './si-rating.model'
+import type { SiTag } from './tag-model'
 
-export interface Si extends BaseModel {
+export default interface Si extends BaseModel {
     value: string
     links: string[]
     references: Guid[]
