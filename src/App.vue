@@ -147,7 +147,7 @@ export default {
 h1 {
     cursor: pointer;
     text-align: center;
-    max-width: 50%;
+    max-width: 100%;
     background-color: #cb4154;
     margin-left: auto;
     margin-right: auto;
@@ -161,7 +161,7 @@ h1 {
     }
 }
 p {
-    max-width: 50%;
+    max-width: 100%;
     background-color: #cb4154;
     text-align: center;
     margin-left: auto;
@@ -171,5 +171,11 @@ p {
     padding-right: 10px;
     padding-top: 5px;
     padding-bottom: 5px;
+}
+
+@media (min-width: 1024px) {
+    h1,p {
+        max-width: 50%;
+    }
 }
 </style>
